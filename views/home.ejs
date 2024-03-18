@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/login-styles.css" />
+</head>
+
+<body>
+  <h1 class="poppins-regular">
+    Welcome <span class="userName">
+      <%= userName %>
+    </span> to Food Share App, where every meal
+    matters! ❤️
+  </h1>
+  <h3 class="poppins-light-italic">
+    Thank you for joining our community dedicated to sharing excess food and
+    making a positive impact. Together, we can reduce food waste and nourish
+    those in need. Let's spread kindness one meal at a time. Get started by
+    donating or receiving food today!"
+  </h3>
+  <div class="container">
+    <a href="/food/donate?userName=<%= userName %>" class="btn btn-primary custom-btn">Donate Food</a>
+    <a href="/food/receive?userName=<%= userName %>" class="btn btn-primary custom-btn">Receive Food</a>
+  </div>
+</body>
+
+</html>

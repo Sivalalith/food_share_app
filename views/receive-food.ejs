@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receive Food</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/login-styles.css" />
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <p class="navbar-brand">Food Share App</p>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="home">
+            <a href="/food/receive?userName=<%= userName %>">Receive</a>
+          </li>
+          <li id="about">
+            <a href="/food/claimedposts?userName=<%= userName %>"
+              >Claimed Posts</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="poppins-regular" style="padding: 0%;">
+        Please select a location to see food notifications from!
+      </h1>
+      <form>
+        <label for="foodNotificationLocation">Location</label>
+        <select name="foodNotificationLocation" id="foodNotificationLocation">
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="London">London</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+        <button
+          type="button"
+          name="foodNotificationLocationSelect"
+          id="foodNotificationLocationSelect"
+        >
+          Select
+        </button>
+        <br />
+        <label for="newFoodLocationAdd">Search</label>
+        <input type="text" name="newFoodLocationAdd" id="newFoodLocationAdd" />
+        <button
+          type="button"
+          name="foodNotificationLocationAdd"
+          id="foodNotificationLocationAdd"
+        >
+          Add New
+        </button>
+      </form>
+      <p>Posts:</p>
+      <div id="messageList"></div>
+    </div>
+    <span id="variableJSON" hidden> <%= JSON.stringify(posts); %> </span>
+    <script src="/receive-food.js"></script>
+  </body>
+</html>

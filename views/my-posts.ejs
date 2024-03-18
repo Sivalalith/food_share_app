@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Posts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/login-styles.css" />
+</head>
+
+<body>
+    <h1 class="poppins-regular">My Posts</h1>
+    <p class="poppins-light-italic">
+        You're food posts will be displayed soon here!
+    </p>
+    <% for(i=0;i<posts.length;i++){ %>
+        <div class="container" style="background-color: blanchedalmond;">
+        <p>Title: <%= posts[i].title %></p>
+        <p>User: <%= posts[i].user %></p>
+        <p>Location: <%= posts[i].foodDonationLocation %></p>
+        <p>Details: <%= posts[i].foodDetails %></p>
+        <p>Notes: <%= posts[i].additionalNotes %></p>
+    </div>
+    <% } %>
+    
+</body>
+
+</html>
